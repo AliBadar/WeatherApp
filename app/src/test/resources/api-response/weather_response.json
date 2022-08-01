@@ -1,0 +1,43 @@
+{
+  "coord":{
+    "lon":21.0938,
+    "lat":7.1881
+  },
+  "weather":[
+    {
+      "id":804,
+      "main":"Clouds",
+      "description":"overcast clouds",
+      "icon":"04n"
+    }
+  ],
+  "base":"stations",
+  "main":{
+    "temp":293.68,
+    "feels_like":294.35,
+    "temp_min":293.68,
+    "temp_max":293.68,
+    "pressure":1013,
+    "humidity":98,
+    "sea_level":1013,
+    "grnd_level":947
+  },
+  "visibility":10000,
+  "wind":{
+    "speed":1.52,
+    "deg":218,
+    "gust":3.46
+  },
+  "clouds":{
+    "all":100
+  },
+  "dt":1659313774,
+  "sys":{
+    "sunrise":1659328137,
+    "sunset":1659372890
+  },
+  "timezone":3600,
+  "id":6255146,
+  "name":"Africa",
+  "cod":200
+}
