@@ -86,7 +86,7 @@ class MainViewModel @Inject constructor(
                         var data = resource.data
                         data?.let {
                             _foreCastData.value = ForeCastContent(data.list.map { forecast ->
-                                ForeCastWeatherUIState(temp = forecast.main?.temp,
+                                ForeCastWeatherUIState(temp = forecast.main?.temp?.toInt(),
                                     name = forecast.weather?.get(0)?.main.toString(),
                                     date = DateUtility.getForeCastingDate(forecast.dt),
                                     iconCode = forecast.weather?.get(0)?.icon?.replace("n", "d").toString()

@@ -3,7 +3,9 @@ package com.ahoy.weatherapp.presentation.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.ahoy.weatherapp.R
 import com.ahoy.weatherapp.data.models.forecast.ForeCastList
+import com.ahoy.weatherapp.databinding.ItemForecastBinding
 import com.ahoy.weatherapp.databinding.ListItemForecastBinding
 import com.ahoy.weatherapp.databinding.ListItemSearchedCityTemperatureBinding
 import com.ahoy.weatherapp.presentation.ui.main.Content
@@ -20,7 +22,7 @@ class ForeCastAdapter @Inject constructor(
 
     private var list: List<ForeCastWeatherUIState> = mutableListOf()
 
-    class UsersViewHolder private constructor(private val binding: ListItemForecastBinding) :
+    class UsersViewHolder private constructor(private val binding: ItemForecastBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(
@@ -28,10 +30,10 @@ class ForeCastAdapter @Inject constructor(
         ) {
 
             foreCastContent?.let {foreCastWeather ->
-                binding.textWeatherName.text = foreCastWeather.name
-                binding.textTemperature.text = foreCastWeather.temp.toString()
+//                binding.textWeatherName.text = foreCastWeather.name
+                binding.textTemperature.text = foreCastWeather.temp.toString() + binding.textTemperature.context.getString(
+                    R.string.degree)
                 binding.textDateTime.text = foreCastWeather.date
-
             }
         }
 
@@ -39,7 +41,7 @@ class ForeCastAdapter @Inject constructor(
 
             fun from(parent: ViewGroup): UsersViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ListItemForecastBinding.inflate(layoutInflater, parent, false)
+                val binding = ItemForecastBinding.inflate(layoutInflater, parent, false)
                 return UsersViewHolder(binding)
             }
 

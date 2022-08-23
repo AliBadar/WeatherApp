@@ -19,7 +19,7 @@ object DateUtility {
         timeStamp?.let {
             val calendar = Calendar.getInstance(Locale.ENGLISH)
             calendar.timeInMillis = timeStamp.times(1000L)
-            val date = DateFormat.format("E, d MMM yyyy hh:mm",calendar).toString()
+            val date = DateFormat.format("hh a",calendar).toString()
             return date.toString()
         }
         return ""

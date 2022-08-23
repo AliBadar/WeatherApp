@@ -19,7 +19,16 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.ahoy.weatherapp.presentation.ui.main.MainFragment"
+        android:name="com.ahoy.weatherapp.presentation.ui.main.WeatherFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_weather" >
+        <action
+            android:id="@+id/action_mainFragment_to_fragmentCities"
+            app:destination="@id/fragmentCities" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCities"
+        android:name="com.ahoy.weatherapp.presentation.ui.main.FragmentCities"
+        android:label="FragmentCities"
+        tools:layout="@layout/fragment_city" />
 </navigation>

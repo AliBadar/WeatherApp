@@ -3,6 +3,8 @@ package com.ahoy.weatherapp.presentation.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.ahoy.weatherapp.R
+import com.ahoy.weatherapp.databinding.ItemCityBinding
 import com.ahoy.weatherapp.databinding.ListItemSearchedCityTemperatureBinding
 import com.ahoy.weatherapp.presentation.ui.OnItemClickListener
 import com.ahoy.weatherapp.presentation.ui.main.Content
@@ -20,7 +22,7 @@ class CitiesAdapter @Inject constructor(
 
     private lateinit var onItemClickListener: OnItemClickListener
 
-    class UsersViewHolder private constructor(private val binding: ListItemSearchedCityTemperatureBinding) :
+    class UsersViewHolder private constructor(private val binding: ItemCityBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(
@@ -30,8 +32,11 @@ class CitiesAdapter @Inject constructor(
 
             content?.let {currentWeatherUIState ->
                 binding.textCityName.text = currentWeatherUIState.name
-                binding.textTemperature.text = currentWeatherUIState.temp.toString()
-                binding.textDateTime.text = currentWeatherUIState.date
+                binding.textTemperature.text = currentWeatherUIState.temp.toString() + binding.textTemperature.context.getString(
+                    R.string.degree)
+                binding.txtHumidity.text = "H: ${currentWeatherUIState.humidity}${binding.txtHumidity.context.getString(
+                    R.string.degree)}"
+                binding.txtWind.text = "W: ${currentWeatherUIState.wind}${binding.txtWind.context.getString(R.string.degree)}"
 
             }
 
@@ -44,7 +49,7 @@ class CitiesAdapter @Inject constructor(
 
             fun from(parent: ViewGroup): UsersViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding = ListItemSearchedCityTemperatureBinding.inflate(layoutInflater, parent, false)
+                val binding = ItemCityBinding.inflate(layoutInflater, parent, false)
                 return UsersViewHolder(binding)
             }
 

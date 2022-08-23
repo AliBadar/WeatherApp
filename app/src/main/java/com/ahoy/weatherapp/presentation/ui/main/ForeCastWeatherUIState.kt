@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 data class ForeCastWeatherUIState (
 
-  var temp       : Double?            = null,
+  var temp       : Int?            = null,
   var humidity : Int?               = null,
   var wind       : Double?              = null,
   var date       : String,
