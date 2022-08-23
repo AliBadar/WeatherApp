@@ -46,7 +46,7 @@ class FragmentCities: Fragment(), OnItemClickListener {
         super.onViewCreated(view, savedInstanceState)
         mBinding.shimmerViewContainer.startShimmer();
         setUpCitiesRecyclerView()
-//        initObservations()
+        initObservations()
         initListeners()
     }
 
@@ -93,6 +93,7 @@ class FragmentCities: Fragment(), OnItemClickListener {
             }
             is FavContent -> {
                 citiesAdapter.setCitiesList(favCitiesState.favCitiesUIState)
+                mBinding.shimmerViewContainer.visibility = View.GONE
             }
         }
     }

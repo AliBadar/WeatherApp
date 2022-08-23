@@ -90,7 +90,7 @@ class MainFragment : Fragment(), OnItemClickListener {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 mainViewModel.currentWeatherData.collect { mainUIState: MainUiState ->
                     updateUI(mainUIState)
-                    mainViewModel.getFavCities()
+//                    mainViewModel.getFavCities()
                 }
             }
         }

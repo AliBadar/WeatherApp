@@ -70,7 +70,7 @@ class WeatherFragment : Fragment(), OnItemClickListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        mBinding.shimmerViewContainer.startShimmer();
         setUpForeCastRecyclerView()
         initObservations()
         initListeners()
@@ -151,11 +151,9 @@ class WeatherFragment : Fragment(), OnItemClickListener {
                 showLoader()
             }
             is Content -> {
-                hideLoader()
                 setData(mainUIState.currentWeatherUIState)
             }
             is ErrorState -> {
-                hideLoader()
                 view?.showSnack(mainUIState.message)
             }
         }
@@ -164,14 +162,12 @@ class WeatherFragment : Fragment(), OnItemClickListener {
     private fun updateForeCastUi(foreCastMainUIState: ForeCastMainUiState){
         when(foreCastMainUIState){
             is ForeCastLoadingState -> {
-                showLoader()
             }
             is ForeCastContent -> {
-                hideLoader()
                 setForeCastData(foreCastMainUIState.foreCastListData)
+                hideLoader()
             }
             is ForeCastErrorState -> {
-                hideLoader()
                 view?.showSnack(foreCastMainUIState.message)
             }
         }
@@ -247,12 +243,14 @@ class WeatherFragment : Fragment(), OnItemClickListener {
     }
 
     private fun showLoader(){
+        mBinding.shimmerViewContainer.visibility = View.VISIBLE
 //        if(mBinding.progressPhotos.visibility != View.VISIBLE){
 //            mBinding.progressPhotos.visibility = View.VISIBLE
 //        }
     }
 
     private fun hideLoader(){
+        mBinding.shimmerViewContainer.visibility = View.GONE
 //        if(mBinding.progressPhotos.visibility == View.VISIBLE){
 //            mBinding.progressPhotos.visibility = View.GONE
 //        }
