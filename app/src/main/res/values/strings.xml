@@ -10,4 +10,5 @@
     <string name="search_city_weather">Search for a City</string>
     <string name="search_for_a_city">Search for a city</string>
     <string name="degree">\u00B0</string>
+    <string name="title_feature_weather">FeatureWEather</string>
 </resources>

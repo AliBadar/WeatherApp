@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.dynamic-feature'
     id 'org.jetbrains.kotlin.android'
     id 'dagger.hilt.android.plugin'
     id 'androidx.navigation.safeargs'
@@ -9,14 +9,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.ahoy.weatherapp"
-        minSdk 21
-        targetSdk 32
-        versionCode 1
-        versionName "1.0"
-        buildConfigField("String", "BASE_URL", BASE_URL)
-        buildConfigField("String", "API_KEY", API_KEY)
-
+        minSdk 23
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -26,21 +19,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    buildFeatures {
-        viewBinding true
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
-    dynamicFeatures = [':feature_weather']
 }
 
 dependencies {
-
+    implementation project(":app")
     implementation "androidx.core:core-ktx:$ktx_version"
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "com.google.android.material:material:$material_version"
