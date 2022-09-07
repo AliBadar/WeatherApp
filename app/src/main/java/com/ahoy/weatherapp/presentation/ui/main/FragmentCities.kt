@@ -16,7 +16,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ahoy.weatherapp.databinding.FragmentCityBinding
-import com.ahoy.weatherapp.databinding.FragmentWeatherBinding
 import com.ahoy.weatherapp.presentation.adapters.CitiesAdapter
 import com.ahoy.weatherapp.presentation.ui.OnItemClickListener
 import dagger.hilt.android.AndroidEntryPoint

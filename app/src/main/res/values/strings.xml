@@ -10,4 +10,9 @@
     <string name="search_city_weather">Search for a City</string>
     <string name="search_for_a_city">Search for a city</string>
     <string name="degree">\u00B0</string>
+    <string name="title_feature_weather">feature_weather</string>
+    <string name="title_instanttest">Module Title</string>
+    <string name="title_feature_test">TestModule</string>
+    <string name="title_featuretest2">TestModule2</string>
+    <string name="title_dynamicfeature">DynamicModule</string>
 </resources>

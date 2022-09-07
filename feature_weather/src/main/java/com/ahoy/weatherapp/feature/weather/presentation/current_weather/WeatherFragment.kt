@@ -1,15 +1,13 @@
-package com.ahoy.weatherapp.presentation.ui.main
+package com.ahoy.weatherapp.feature.weather.presentation.current_weather
 
 import android.Manifest
+import android.content.Context
 import android.location.Location
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
-import android.widget.EditText
-import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts.RequestPermission
 import androidx.fragment.app.Fragment
@@ -18,28 +16,20 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.ahoy.weatherapp.R
-import com.ahoy.weatherapp.data.models.forecast.ForeCastList
-import com.ahoy.weatherapp.databinding.FragmentCityBinding
-import com.ahoy.weatherapp.databinding.FragmentMainBinding
-import com.ahoy.weatherapp.databinding.FragmentWeatherBinding
-import com.ahoy.weatherapp.presentation.adapters.CitiesAdapter
-import com.ahoy.weatherapp.presentation.adapters.ForeCastAdapter
-import com.ahoy.weatherapp.presentation.ui.OnItemClickListener
-import com.ahoy.weatherapp.presentation.ui.splash.SplashFragmentDirections
+import com.ahoy.weatherapp.feature.weather.databinding.FragmentWeatherBinding
+import com.ahoy.weatherapp.feature.weather.presentation.current_weather.adapters.ForeCastAdapter
+import com.ahoy.weatherapp.feature.weather.presentation.current_weather.forecast_uistate.*
+import com.ahoy.weatherapp.feature.weather.presentation.current_weather.interfaces.OnItemClickListener
+import com.ahoy.weatherapp.feature.weather.presentation.current_weather.uistate.*
 import com.ahoy.weatherapp.utils.PermissionsUtils
 import com.ahoy.weatherapp.utils.showSnack
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
-import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 
-@AndroidEntryPoint
 class WeatherFragment : Fragment(), OnItemClickListener {
 
     private val mainViewModel: MainViewModel by viewModels()
@@ -48,9 +38,6 @@ class WeatherFragment : Fragment(), OnItemClickListener {
     private lateinit var fusedLocationClient: FusedLocationProviderClient
 
     private lateinit var mContentList : List<Content>
-
-    @Inject
-    lateinit var citiesAdapter: CitiesAdapter
 
     @Inject
     lateinit var foreCastAdapter: ForeCastAdapter
@@ -85,7 +72,7 @@ class WeatherFragment : Fragment(), OnItemClickListener {
 //        }
 
         mBinding.btnSearch.setOnClickListener {
-            findNavController().navigate(WeatherFragmentDirections.actionMainFragmentToFragmentCities())
+//            findNavController().navigate(WeatherFragmentDirections.actionMainFragmentToFragmentCities())
         }
 
     }
@@ -100,13 +87,6 @@ class WeatherFragment : Fragment(), OnItemClickListener {
             }
         }
 
-        viewLifecycleOwner.lifecycleScope.launch {
-            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                mainViewModel.favCitiesData.collect { favCitiesState: FavCitiesMainUiState ->
-                    updateFavCites(favCitiesState)
-                }
-            }
-        }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -119,17 +99,6 @@ class WeatherFragment : Fragment(), OnItemClickListener {
         findNavController().currentBackStackEntry?.savedStateHandle?.getLiveData<String>("key")?.observe(viewLifecycleOwner){result ->
             if (result.isNotEmpty()){
                 filterData(result)
-            }
-        }
-    }
-
-    private fun updateFavCites(favCitiesState: FavCitiesMainUiState){
-        when(favCitiesState){
-            is LoadingFavState -> {
-
-            }
-            is FavContent -> {
-                citiesAdapter.setCitiesList(favCitiesState.favCitiesUIState)
             }
         }
     }
@@ -263,5 +232,13 @@ class WeatherFragment : Fragment(), OnItemClickListener {
     private fun filterData(searchQuery: String){
         mainViewModel.getCurrentWeather(q = searchQuery, saveIntoDB = true)
         mainViewModel.getForeCast(q = searchQuery)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        // Inject dagger here
+//        WeatherComponent.
+//        WeatherComponent.factory().create(coreComponent()).inject(this)
     }
 }

@@ -1,4 +1,4 @@
-package com.ahoy.weatherapp.presentation.ui.main
+package com.ahoy.weatherapp.feature.weather.presentation.current_weather.uistate
 
 import com.ahoy.weatherapp.data.models.current_weather.CurrentWeather
 

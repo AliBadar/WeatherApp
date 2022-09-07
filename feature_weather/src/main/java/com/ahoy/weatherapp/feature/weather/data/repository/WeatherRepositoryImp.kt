@@ -1,4 +1,4 @@
-package com.ahoy.weatherapp.data.repository
+package com.ahoy.weatherapp.feature.weather.data.repository
 
 import androidx.annotation.WorkerThread
 import com.ahoy.weatherapp.data.database.AppLocalDataSource
@@ -6,14 +6,13 @@ import com.ahoy.weatherapp.data.models.current_weather.CurrentWeather
 import com.ahoy.weatherapp.data.models.forecast.ForecastWeather
 import com.ahoy.weatherapp.data.remote.ApiRemoteDataSource
 import com.ahoy.weatherapp.data.remote.Resource
-import com.ahoy.weatherapp.domain.repository.WeatherRepository
+import com.ahoy.weatherapp.feature.weather.domain.repository.WeatherRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import retrofit2.http.Query
 import javax.inject.Inject
-import javax.inject.Singleton
 
-class WeatherRepositoryImp @Inject constructor(private val apiRemoteDataSource: ApiRemoteDataSource, private val appLocalDataSource: AppLocalDataSource): WeatherRepository{
+class WeatherRepositoryImp @Inject constructor(private val apiRemoteDataSource: ApiRemoteDataSource, private val appLocalDataSource: AppLocalDataSource):
+    WeatherRepository {
 
     @WorkerThread
     override suspend fun getCurrentWeather(lat: String,

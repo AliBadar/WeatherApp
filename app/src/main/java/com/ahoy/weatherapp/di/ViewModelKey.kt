@@ -1,4 +1,4 @@
-package com.mbobiosio.modularapp.di
+package com.ahoy.weatherapp.di
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

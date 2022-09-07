@@ -1,4 +1,4 @@
-package com.ahoy.weatherapp.presentation.adapters
+package com.ahoy.weatherapp.feature.weather.presentation.current_weather.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,11 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ahoy.weatherapp.R
 import com.ahoy.weatherapp.data.models.forecast.ForeCastList
 import com.ahoy.weatherapp.databinding.ItemForecastBinding
-import com.ahoy.weatherapp.databinding.ListItemForecastBinding
-import com.ahoy.weatherapp.databinding.ListItemSearchedCityTemperatureBinding
-import com.ahoy.weatherapp.presentation.ui.main.Content
-import com.ahoy.weatherapp.presentation.ui.main.ForeCastContent
-import com.ahoy.weatherapp.presentation.ui.main.ForeCastWeatherUIState
+import com.ahoy.weatherapp.feature.weather.presentation.current_weather.forecast_uistate.ForeCastWeatherUIState
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import java.text.DateFormat

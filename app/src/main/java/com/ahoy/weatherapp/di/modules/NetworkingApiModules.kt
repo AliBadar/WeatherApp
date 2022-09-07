@@ -1,4 +1,4 @@
-package com.ahoy.weatherapp.modules
+package com.ahoy.weatherapp.di.modules
 
 import com.ahoy.weatherapp.BuildConfig
 import com.ahoy.weatherapp.data.remote.ApiService

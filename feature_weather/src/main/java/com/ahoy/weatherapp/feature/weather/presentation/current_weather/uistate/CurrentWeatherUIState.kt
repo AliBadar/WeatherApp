@@ -1,7 +1,4 @@
-package com.ahoy.weatherapp.presentation.ui.main
-
-import com.google.gson.annotations.SerializedName
-
+package com.ahoy.weatherapp.feature.weather.presentation.current_weather.uistate
 
 data class CurrentWeatherUIState (
 

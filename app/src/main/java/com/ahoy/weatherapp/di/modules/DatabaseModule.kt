@@ -1,4 +1,4 @@
-package com.ahoy.weatherapp.modules
+package com.ahoy.weatherapp.di.modules
 
 import android.content.Context
 import androidx.room.Room

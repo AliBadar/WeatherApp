@@ -1,6 +1,6 @@
-package com.ahoy.weatherapp.domain.usecase
+package com.ahoy.weatherapp.feature.weather.domain.usecase
 
-import com.ahoy.weatherapp.domain.repository.WeatherRepository
+import com.ahoy.weatherapp.feature.weather.domain.repository.WeatherRepository
 import javax.inject.Inject
 
 class GetCurrentWeatherUseCase @Inject constructor(private val weatherRepository: WeatherRepository) {

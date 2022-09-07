@@ -1,4 +1,4 @@
-package com.ahoy.weatherapp.domain.repository
+package com.ahoy.weatherapp.feature.weather.domain.repository
 
 import com.ahoy.weatherapp.data.models.current_weather.CurrentWeather
 import com.ahoy.weatherapp.data.models.forecast.ForecastWeather

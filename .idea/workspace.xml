@@ -5,11 +5,97 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60fec54b-4167-4a67-a55c-ab3b07a5c8ff" name="Changes" comment="" />
+    <list default="true" id="60fec54b-4167-4a67-a55c-ab3b07a5c8ff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/dynamicfeature/WeatherApp.dynamicfeature.androidTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/dynamicfeature/WeatherApp.dynamicfeature.unitTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/feature_test/WeatherApp.feature_test.androidTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/feature_test/WeatherApp.feature_test.unitTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/featuretest2/WeatherApp.featuretest2.androidTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/featuretest2/WeatherApp.featuretest2.unitTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/instantTest/WeatherApp.instantTest.androidTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/instantTest/WeatherApp.instantTest.unitTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/testmodule/WeatherApp.testmodule.androidTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/testmodule/WeatherApp.testmodule.unitTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/testmodulenew/WeatherApp.testmodulenew.androidTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/testmodulenew/WeatherApp.testmodulenew.unitTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/di/AppModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/di/DynamicFeatureDependencies.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/di/ViewModelKey.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/di/modules/DatabaseModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/di/modules/NetworkingApiModules.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/di/modules/RepositoryModule.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/navigation/test_graph.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/androidTest/java/com/ahoy/weatherapp/feature/weather/ExampleInstrumentedTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/TestFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/TestViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/data/mapper/Mapper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/data/mapper/WeatherMapper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/data/repository/WeatherRepositoryImp.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/di/DynamicFeatureComponent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/domain/WeatherComponent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/domain/repository/WeatherRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/domain/usecase/GetCurrentWeatherUseCase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/domain/usecase/GetForeCastWeatherUseCase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/presentation/current_weather/MainViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/presentation/current_weather/WeatherFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/presentation/current_weather/adapters/ForeCastAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/presentation/current_weather/forecast_uistate/ForeCastMainUiState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/presentation/current_weather/forecast_uistate/ForeCastWeatherUIState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/presentation/current_weather/interfaces/OnItemClickListener.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/presentation/current_weather/uistate/CurrentWeatherMainUiState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/presentation/current_weather/uistate/CurrentWeatherUIState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/res/layout/fragment_current_weather.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/res/layout/fragment_test.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/res/navigation/weather_graph.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/feature_weather/src/test/java/com/ahoy/weatherapp/feature/weather/ExampleUnitTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/domain/usecase/GetCurrentWeatherUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/domain/usecase/GetCurrentWeatherUseCase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/domain/usecase/GetFavCitiesWeatherUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/domain/usecase/GetFavCitiesWeatherUseCase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/domain/usecase/GetForeCastWeatherUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/domain/usecase/GetForeCastWeatherUseCase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/domain/usecase/SaveSearchCityWeatherUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/domain/usecase/SaveSearchCityWeatherUseCase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/presentation/ui/main/FragmentCities.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/presentation/ui/main/FragmentCities.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/presentation/ui/main/MainFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/presentation/ui/main/MainFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/presentation/ui/main/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/presentation/ui/main/MainViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/presentation/ui/main/WeatherFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/presentation/ui/main/WeatherFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_weather.xml" beforeDir="false" afterPath="$PROJECT_DIR$/feature_weather/src/main/res/layout/fragment_weather.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +138,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="navigationResourceFile" />
         <option value="layoutResourceFile" />
+        <option value="Kotlin Class" />
+        <option value="Kotlin Interface" />
       </list>
     </option>
   </component>
@@ -68,6 +157,9 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="2DkuothC7yon1dF6I82xLY2bf38" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -75,13 +167,103 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/di" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="android.template.-1760247192">
+      <recent name="com.ahoy.instanttest" />
+      <recent name="com.ahoy.weatherapp.feature.weather" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/ahoy/weatherapp/di" />
+      <recent name="$PROJECT_DIR$/feature_weather/src/main/res/layout" />
+      <recent name="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/data" />
+      <recent name="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/domain" />
+      <recent name="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/domain/usecase" />
+    </key>
+    <key name="android.template.1994926588">
+      <recent name="com.ahoy.weatherapp.feature.weather.presentation.current_weather" />
+      <recent name="com.ahoy.dynamicfeature" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.ahoy.weatherapp.feature.weather" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.ahoy.weatherapp.di" />
+      <recent name="com.ahoy.weatherapp.feature.weather.di" />
+      <recent name="com.ahoy.weatherapp.feature.weather.presentation.current_weather.interfaces" />
+      <recent name="com.ahoy.weatherapp.feature.weather.presentation.current_weather.adapters" />
+      <recent name="com.ahoy.weatherapp.feature.weather.presentation.current_weather" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Android App.app">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="WeatherApp.app" />
+      <module name="WeatherApp.app.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="WeatherApp.dynamicfeature,WeatherApp.feature_test,WeatherApp.featuretest2,WeatherApp.instantTest" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="testmodule" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="WeatherApp.testmodule.main" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
@@ -137,6 +319,68 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testmodulenew" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="WeatherApp.testmodulenew.main" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
+      <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="INSPECTION_WITHOUT_ACTIVITY_RESTART" value="false" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Android App.app" />
+      <item itemvalue="Android App.testmodule" />
+      <item itemvalue="Android App.testmodulenew" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -148,5 +392,17 @@
       <updated>1661255584088</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

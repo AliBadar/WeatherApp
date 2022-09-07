@@ -1,5 +1,5 @@
 
-package com.ahoy.weatherapp.modules
+package com.ahoy.weatherapp.di.modules
 
 
 import com.ahoy.weatherapp.data.database.AppLocalDataSource

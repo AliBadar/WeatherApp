@@ -1,7 +1,8 @@
-package com.ahoy.weatherapp.data.mapper
+package com.ahoy.weatherapp.feature.weather.data.mapper
 
+import com.ahoy.weatherapp.data.mapper.Mapper
 import com.ahoy.weatherapp.data.models.current_weather.CurrentWeather
-import com.ahoy.weatherapp.presentation.ui.main.CurrentWeatherUIState
+import com.ahoy.weatherapp.feature.weather.presentation.current_weather.uistate.CurrentWeatherUIState
 import com.ahoy.weatherapp.utils.DateUtility.getDate
 import javax.inject.Inject
 

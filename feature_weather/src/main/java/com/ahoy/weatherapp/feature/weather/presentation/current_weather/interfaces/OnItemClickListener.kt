@@ -1,6 +1,6 @@
-package com.ahoy.weatherapp.presentation.ui
+package com.ahoy.weatherapp.feature.weather.presentation.current_weather.interfaces
 
-import com.ahoy.weatherapp.presentation.ui.main.CurrentWeatherUIState
+import com.ahoy.weatherapp.feature.weather.presentation.current_weather.uistate.CurrentWeatherUIState
 
 
 interface OnItemClickListener {

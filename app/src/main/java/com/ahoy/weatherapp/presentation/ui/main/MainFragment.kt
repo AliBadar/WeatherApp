@@ -45,10 +45,10 @@ class MainFragment : Fragment(), OnItemClickListener {
 
     private lateinit var mContentList : List<Content>
 
-    @Inject
+//    @Inject
     lateinit var citiesAdapter: CitiesAdapter
 
-    @Inject
+//    @Inject
     lateinit var foreCastAdapter: ForeCastAdapter
 
     override fun onCreateView(

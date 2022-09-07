@@ -4,9 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_rectangle_2.xml" value="0.126" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_city.xml" value="0.24583333333333332" />
+        <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/layout/fragment_weather.xml" value="0.24583333333333332" />
         <entry key="app/src/main/res/layout/layout_shimmer.xml" value="0.24479166666666666" />
+        <entry key="dynamicfeature/src/main/res/layout/fragment_dynamic_feature.xml" value="0.23177083333333334" />
+        <entry key="feature_test/src/main/res/layout/fragment_test.xml" value="0.24583333333333332" />
+        <entry key="feature_weather/src/main/res/layout/fragment_current_weather.xml" value="0.10677083333333333" />
+        <entry key="feature_weather/src/main/res/layout/fragment_test.xml" value="0.1" />
+        <entry key="feature_weather/src/main/res/layout/fragment_weather.xml" value="0.24583333333333332" />
+        <entry key="testmodule/src/main/res/layout/activity_main.xml" value="0.24583333333333332" />
       </map>
     </option>
   </component>
