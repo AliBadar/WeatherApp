@@ -2,7 +2,7 @@ package com.ahoy.weatherapp.data.remote
 
 import com.ahoy.weatherapp.MainCoroutinesRule
 import com.ahoy.weatherapp.data.models.current_weather.CurrentWeather
-import com.ahoy.weatherapp.data.models.forecast.ForecastWeather
+import com.ahoy.core.responses.forecast.ForecastWeather
 import com.ahoy.weatherapp.data.remote.api.ApiAbstract
 import kotlinx.coroutines.runBlocking
 import org.hamcrest.CoreMatchers

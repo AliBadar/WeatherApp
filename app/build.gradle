@@ -36,6 +36,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    dynamicFeatures = [':feature_weather']
 }
 
 dependencies {
@@ -61,6 +62,9 @@ dependencies {
 
     implementation "com.google.dagger:hilt-android:$hilt_version"
     implementation 'com.google.android.gms:play-services-location:20.0.0'
+    implementation project(path: ':domain')
+    implementation project(path: ':data')
+    implementation project(path: ':core')
     testImplementation project(path: ':app')
     kapt "com.google.dagger:hilt-compiler:$hilt_version"
 

@@ -1,20 +1,17 @@
 package com.ahoy.weatherapp.presentation.ui
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import androidx.lifecycle.Observer
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.ahoy.weatherapp.MockTestUtil
 import com.ahoy.weatherapp.data.mapper.WeatherMapper
 import com.ahoy.weatherapp.data.repository.FakeWeatherRepository
-import com.ahoy.weatherapp.domain.usecase.GetCurrentWeatherUseCase
+import com.ahoy.domain.usecase.GetCurrentWeatherUseCase
 import com.ahoy.weatherapp.domain.usecase.GetFavCitiesWeatherUseCase
-import com.ahoy.weatherapp.domain.usecase.GetForeCastWeatherUseCase
+import com.ahoy.domain.usecase.GetForeCastWeatherUseCase
 import com.ahoy.weatherapp.domain.usecase.SaveSearchCityWeatherUseCase
 import com.ahoy.weatherapp.presentation.ui.main.MainViewModel
 import io.mockk.*
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.runBlocking
 import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:moduleName="@string/title_feature_weather"
+    app:startDestination="@id/weatherFragment">
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.ahoy.weatherapp.feature.weather.presentation.ui.WeatherFragment"
+        android:label="TestFragment" >
+        <action
+            android:id="@+id/action_weatherFragment_to_fragmentCities2"
+            app:destination="@id/fragmentCities2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCities2"
+        android:name="com.ahoy.weatherapp.feature.weather.presentation.ui.cities.FragmentCities"
+        android:label="FragmentCities" />
+</navigation>

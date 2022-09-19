@@ -8,17 +8,14 @@ import com.ahoy.weatherapp.MockTestUtil
 import com.ahoy.weatherapp.data.database.AppDao
 import com.ahoy.weatherapp.data.database.AppDatabase
 import com.ahoy.weatherapp.data.models.current_weather.CurrentWeather
-import com.ahoy.weatherapp.data.models.forecast.ForecastWeather
+import com.ahoy.core.responses.forecast.ForecastWeather
 import com.ahoy.weatherapp.data.remote.Resource
 import com.ahoy.weatherapp.domain.repository.WeatherRepository
-import com.google.common.truth.Truth
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
-import org.junit.Test
 import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
