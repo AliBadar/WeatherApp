@@ -198,7 +198,6 @@ class WeatherFragment : Fragment(), OnItemClickListener {
                 // get the latitude and longitude
                 // and create the http URL
                 location?.let { loc ->
-                    mainViewModel.getCurrentWeather(lat = loc.latitude.toString(),lon =  loc.longitude.toString())
                     mainViewModel.getForeCast(lat = loc.latitude.toString(),lon =  loc.longitude.toString())
                 }
             }

@@ -19,6 +19,7 @@ import com.ahoy.domain.usecase.GetForeCastWeatherUseCase
 import com.ahoy.domain.usecase.SaveSearchCityWeatherUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -109,4 +110,13 @@ class MainViewModel @Inject constructor(
 
     }
 
+    private val _message = MutableStateFlow("")
+    val message: StateFlow<String> get() = _message
+
+    fun loadMessage() {
+        viewModelScope.launch {
+            _message.value = "Greetings!"
+        }
+    }
 }
+
