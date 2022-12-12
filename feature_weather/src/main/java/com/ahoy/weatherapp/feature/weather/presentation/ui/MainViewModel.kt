@@ -1,14 +1,13 @@
 package com.ahoy.weatherapp.feature.weather.presentation.ui
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ahoy.common.utils.DateUtility
+import com.ahoy.core.mapper.ForeCastWeatherMapper
 import com.ahoy.core.mapper.WeatherMapper
 import com.ahoy.core.network.Resource
-import com.ahoy.core.uistates.Content
-import com.ahoy.core.uistates.ErrorState
-import com.ahoy.core.uistates.LoadingState
-import com.ahoy.core.uistates.MainUiState
+import com.ahoy.core.uistates.*
 import com.ahoy.core.uistates.favcity.FavCitiesMainUiState
 import com.ahoy.core.uistates.favcity.FavContent
 import com.ahoy.core.uistates.favcity.LoadingFavState
@@ -31,6 +30,7 @@ class MainViewModel @Inject constructor(
     private val saveSearchCityWeatherUseCase: SaveSearchCityWeatherUseCase,
     private val getFavCitiesWeatherUseCase: GetFavCitiesWeatherUseCase,
     private val weatherMapper: WeatherMapper,
+    private val foreCastWeatherMapper: ForeCastWeatherMapper,
 ) : ViewModel() {
 
     private val _currentWeatherData = MutableStateFlow<MainUiState>(LoadingState)
@@ -42,19 +42,19 @@ class MainViewModel @Inject constructor(
     private val _favCitiesData = MutableStateFlow<FavCitiesMainUiState>(LoadingFavState)
     val favCitiesData = _favCitiesData.asStateFlow()
 
-    fun getCurrentWeather(lat: String = "", lon: String = "", q: String = "", saveIntoDB: Boolean = false){
+    fun getCurrentWeather(lat: String = "", lon: String = "", q: String = ""){
         viewModelScope.launch {
             _currentWeatherData.value = LoadingState
 
-            getCurrentWeatherUseCase.invoke(lat,lon,q).collect { resource ->
+            getCurrentWeatherUseCase(lat,lon,q).collect { resource ->
                 when(resource.status){
                     Resource.Status.SUCCESS -> {
                         var data = resource.data
                         data?.let {currentWeather ->
-                            if (saveIntoDB){
-                                saveSearchCityWeatherUseCase.invoke(currentWeather)
-                            }
-                        _currentWeatherData.value = Content(weatherMapper.mapToEntity(currentWeather))
+//                            if (saveIntoDB){
+//                                saveSearchCityWeatherUseCase.invoke(currentWeather)
+//                            }
+                            _currentWeatherData.value = Content(weatherMapper.mapToEntity(currentWeather))
                         }
 
                     }
@@ -90,14 +90,7 @@ class MainViewModel @Inject constructor(
                     Resource.Status.SUCCESS -> {
                         var data = resource.data
                         data?.let {
-                            _foreCastData.value = ForeCastContent(data.list.map { forecast ->
-                                ForeCastWeatherUIState(temp = forecast.main?.temp?.toInt(),
-                                    name = forecast.weather?.get(0)?.main.toString(),
-                                    date = DateUtility.getForeCastingDate(forecast.dt),
-                                    iconCode = forecast.weather?.get(0)?.icon?.replace("n", "d").toString()
-                                  )
-
-                            })
+                            _foreCastData.value = foreCastWeatherMapper.mapToEntity(data.list)
                         }
                     }
                     Resource.Status.ERROR -> {
@@ -113,10 +106,12 @@ class MainViewModel @Inject constructor(
     private val _message = MutableStateFlow("")
     val message: StateFlow<String> get() = _message
 
-    fun loadMessage() {
+    suspend fun loadMessage(text: String): String {
         viewModelScope.launch {
             _message.value = "Greetings!"
         }
+
+        return text
     }
 }
 

@@ -1,29 +1,38 @@
 package com.ahoy.weatherapp.feature.weather.presentation.ui
 
+import android.text.format.DateFormat
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.lifecycle.Observer
+import app.cash.turbine.test
+import com.ahoy.common.utils.DateUtility
+import com.ahoy.core.mapper.ForeCastWeatherMapper
 import com.ahoy.core.mapper.WeatherMapper
 import com.ahoy.core.network.Resource
-import com.ahoy.core.uistates.Content
+import com.ahoy.core.uistates.*
+import com.ahoy.core.uistates.forecast.ForeCastContent
+import com.ahoy.core.uistates.forecast.ForeCastLoadingState
+import com.ahoy.core.uistates.forecast.ForeCastMainUiState
+import com.ahoy.core.uistates.forecast.ForeCastWeatherUIState
 import com.ahoy.domain.usecase.GetCurrentWeatherUseCase
 import com.ahoy.domain.usecase.GetFavCitiesWeatherUseCase
 import com.ahoy.domain.usecase.GetForeCastWeatherUseCase
 import com.ahoy.domain.usecase.SaveSearchCityWeatherUseCase
 import com.ahoy.weatherapp.feature.weather.MainCoroutinesRule
 import com.ahoy.weatherapp.feature.weather.MockTestUtil
-import io.mockk.MockKAnnotations
-import io.mockk.coEvery
-import io.mockk.coVerify
+import io.mockk.*
 import io.mockk.impl.annotations.MockK
-import io.mockk.verify
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runTest
 import org.junit.After
-import org.junit.Assert.*
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import java.util.*
+
 
 @RunWith(JUnit4::class)
 class MainViewModelTest {
@@ -53,60 +62,150 @@ class MainViewModelTest {
     @MockK
     lateinit var weatherMapper: WeatherMapper
 
+    @MockK
+    lateinit var foreCastWeatherMapper: ForeCastWeatherMapper
+
+
+    @MockK
+    lateinit var calendar: Calendar
+
 
     @Before
     fun setUp() {
         MockKAnnotations.init(this)
 
-
-
+        //Invoke
+        mainViewModel = MainViewModel(
+            getCurrentWeatherUseCase,
+            getForeCastWeatherUseCase,
+            saveSearchCityWeatherUseCase,
+            getFavCitiesWeatherUseCase,
+            weatherMapper,
+            foreCastWeatherMapper
+        )
     }
 
     @After
-    fun tearDown(){
+    fun tearDown() {
 
     }
+
 
     @Test
-    fun `test when MainViewModel is initialized, current Location Weather is fetched`() = runBlocking {
-        //Given
-        val givenWeather = MockTestUtil.createCurrentWeather()
+    fun `test when MainViewModel is initialized, current Location Weather is fetched`() =
+        runBlocking {
+            //Given
+            val givenWeather = MockTestUtil.createCurrentWeather()
+            val givenMapperData = MockTestUtil.getMapEntity()
 
-        //When
-        coEvery { getCurrentWeatherUseCase.invoke(any(), any(), any()) }
-            .returns(flowOf(Resource.success(givenWeather)))
+//            Observers to observe for livedata
+//            val uiObserver = mockk<Observer<MainUiState>>(relaxed = true)
+//            val uiObserverCurrentWeather = mockk<Observer<CurrentWeatherUIState>>(relaxed = true)
+//        val photosListObserver = mockk<Observer<List<PhotoModel>>>(relaxed = true)
 
-        //Invoke
-        mainViewModel = MainViewModel(
-            getCurrentWeatherUseCase,
-            getForeCastWeatherUseCase,
-            saveSearchCityWeatherUseCase,
-            getFavCitiesWeatherUseCase,
-            weatherMapper
-        )
+            //When
+            coEvery { getCurrentWeatherUseCase.invoke(any(), any(), any()) }
+                .returns(flowOf(Resource.success(givenWeather)))
 
-        //Then
-        coVerify(exactly = 1) { getCurrentWeatherUseCase.invoke("", "", "") }
-        var value = mainViewModel.currentWeatherData.value
-        assertEquals(givenWeather, mainViewModel.currentWeatherData.value)
-//        verify { match { mainViewModel.currentWeatherData.value == givenWeather } }
-    }
+            coEvery { weatherMapper.mapToEntity(any()) }
+                .returns(givenMapperData)
+
+
+
+//            Setting Observer For Live Data
+//            mainViewModel.currentWeatherData.observeForever(uiObserver)
+//            mainViewModel.currentWeatherMainUIState.observeForever(uiObserverCurrentWeather)
+
+
+            runTest {
+                mainViewModel.getCurrentWeather("1212.11", "1212.11", "lahore")
+            }
+
+            mainViewModel.currentWeatherData.test {
+                assertEquals(Content(givenMapperData), awaitItem())
+                cancelAndIgnoreRemainingEvents()
+            }
+
+            //Then
+            coVerify(exactly = 1) {
+                getCurrentWeatherUseCase(
+                    "1212.11",
+                    "1212.11",
+                    "lahore"
+                )
+            }
+
+//            Verifying the observer changed for different states
+//            verify { uiObserver.onChanged(LoadingState) }
+//            verify { uiObserver.onChanged(Content(MockTestUtil.getMapEntity())) }
+//            verify { uiObserverCurrentWeather.onChanged(match { it.name == givenWeather.name }) }
+        }
 
     @Test
-    fun demoTest() {
+    fun `test when MainViewModel is initialized, error is returned when current weather is fetched`() =
+        runBlocking {
+            //Given
+            val givenMapperData = MockTestUtil.getMapEntity()
+
+            val errorMessage = "Error message"
+            //When
+            coEvery { getCurrentWeatherUseCase.invoke(any(), any(), any()) }
+                .returns(flowOf(Resource.error(null, errorMessage)))
+
+            coEvery { weatherMapper.mapToEntity(any()) }
+                .returns(givenMapperData)
 
 
-        //Invoke
-        mainViewModel = MainViewModel(
-            getCurrentWeatherUseCase,
-            getForeCastWeatherUseCase,
-            saveSearchCityWeatherUseCase,
-            getFavCitiesWeatherUseCase,
-            weatherMapper
-        )
 
 
-        mainViewModel.loadMessage() // Uses testDispatcher, runs its coroutine eagerly
-        assertEquals("Greetings!", mainViewModel.message.value)
-    }
+            runTest {
+                mainViewModel.getCurrentWeather("1212.11", "1212.11", "lahore")
+            }
+
+
+            mainViewModel.currentWeatherData.test {
+                assertEquals(ErrorState(errorMessage), awaitItem())
+                cancelAndIgnoreRemainingEvents()
+            }
+            //Then
+            coVerify(exactly = 1) {
+                getCurrentWeatherUseCase(
+                    "1212.11",
+                    "1212.11",
+                    "lahore"
+                )
+            }
+        }
+
+
+    @Test
+    fun `test when forecast data Weather is fetched should return forecast list from use-case`() =
+        runBlocking {
+            //Given
+            val givenForeCast = MockTestUtil.createForeCastWeather()
+            val givenForeCastMapper = MockTestUtil.getForeCaseMapEntity()
+
+            //When
+            coEvery { getForeCastWeatherUseCase.invoke(any(), any(), any()) }
+                .returns(flowOf(Resource.success(givenForeCast)))
+
+            coEvery { foreCastWeatherMapper.mapToEntity(any()) }
+                .returns(givenForeCastMapper)
+
+            mainViewModel.getForeCast("1212.11", "1212.11", "lahore")
+
+            mainViewModel.foreCastData.test {
+                assertEquals(givenForeCastMapper, awaitItem())
+                cancelAndIgnoreRemainingEvents()
+            }
+
+            //Then
+            coVerify(exactly = 1) {
+                getForeCastWeatherUseCase.invoke(
+                    "1212.11",
+                    "1212.11",
+                    "lahore",
+                )
+            }
+        }
 }

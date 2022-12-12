@@ -8,8 +8,6 @@ data class CurrentWeatherUIState (
   var temp       : Int?            = null,
   var humidity : Int?               = null,
   var wind       : Int?              = null,
-  var date       : String,
+  var date       : String? = null,
   var name       : String,
-  var iconCode       : String,
-
 )

@@ -8,8 +8,7 @@ data class ForeCastWeatherUIState (
   var temp       : Int?            = null,
   var humidity : Int?               = null,
   var wind       : Double?              = null,
-  var date       : String,
-  var name       : String,
-  var iconCode       : String,
+  var date       : String? = null,
+  var iconCode       : String? = null,
 
 )
