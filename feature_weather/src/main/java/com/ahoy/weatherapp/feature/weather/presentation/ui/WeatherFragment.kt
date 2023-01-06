@@ -262,7 +262,7 @@ class WeatherFragment : Fragment(), OnItemClickListener {
     }
 
     private fun filterData(searchQuery: String){
-        mainViewModel.getCurrentWeather(q = searchQuery/*, saveIntoDB = true*/)
+        mainViewModel.getCurrentWeather(q = searchQuery, saveIntoDB = true)
         mainViewModel.getForeCast(q = searchQuery)
     }
 

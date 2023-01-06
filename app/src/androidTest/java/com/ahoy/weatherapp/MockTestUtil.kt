@@ -1,9 +1,9 @@
 
 package com.ahoy.weatherapp
 
-import com.ahoy.weatherapp.data.models.current_weather.CurrentWeather
-import com.ahoy.weatherapp.data.models.current_weather.Main
-import com.ahoy.weatherapp.data.models.current_weather.Wind
+import com.ahoy.core.responses.current_weather.CurrentWeather
+import com.ahoy.core.responses.current_weather.Main
+import com.ahoy.core.responses.current_weather.Wind
 import com.ahoy.core.responses.forecast.ForeCastList
 import com.ahoy.core.responses.forecast.ForecastWeather
 

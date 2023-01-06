@@ -42,7 +42,7 @@ class MainViewModel @Inject constructor(
     private val _favCitiesData = MutableStateFlow<FavCitiesMainUiState>(LoadingFavState)
     val favCitiesData = _favCitiesData.asStateFlow()
 
-    fun getCurrentWeather(lat: String = "", lon: String = "", q: String = ""){
+    fun getCurrentWeather(lat: String = "", lon: String = "", q: String = "", saveIntoDB: Boolean = false){
         viewModelScope.launch {
             _currentWeatherData.value = LoadingState
 
@@ -51,9 +51,9 @@ class MainViewModel @Inject constructor(
                     Resource.Status.SUCCESS -> {
                         var data = resource.data
                         data?.let {currentWeather ->
-//                            if (saveIntoDB){
-//                                saveSearchCityWeatherUseCase.invoke(currentWeather)
-//                            }
+                            if (saveIntoDB){
+                                saveSearchCityWeatherUseCase.invoke(currentWeather)
+                            }
                             _currentWeatherData.value = Content(weatherMapper.mapToEntity(currentWeather))
                         }
 

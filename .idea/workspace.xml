@@ -14,22 +14,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="60fec54b-4167-4a67-a55c-ab3b07a5c8ff" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/ahoy/domain/usecase/GetCurrentWeatherUseCaseTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/test/java/com/ahoy/domain/usecase/GetForeCastWeatherUseCaseTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/test/java/com/ahoy/common/utils/DateUtilityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/com/ahoy/core/mapper/ForeCaseWeatherMapper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/test/java/com/ahoy/core/MockTestUtil.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/test/java/com/ahoy/core/mapper/ForeCastWeatherMapperTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/test/java/com/ahoy/core/mapper/WeatherMapperTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/test/java/com/ahoy/data/FakeRemoteData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/test/java/com/ahoy/data/MainCoroutinesRule.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/src/test/java/com/ahoy/data/repository/WeatherRepositoryImpTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/presentation/CoroutineContextProvider.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_weather/src/test/java/com/ahoy/weatherapp/feature/weather/PresentationBaseTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/feature_weather/src/test/java/com/ahoy/weatherapp/feature/weather/TestContextProvider.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
@@ -39,21 +23,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/ahoy/weatherapp/MockTestUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/ahoy/weatherapp/MockTestUtil.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/ahoy/weatherapp/MockTestUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/ahoy/weatherapp/MockTestUtil.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/ahoy/weatherapp/data/database/AppDaoTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/ahoy/weatherapp/data/database/AppDaoTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/test/java/com/ahoy/weatherapp/data/remote/ApiServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/ahoy/weatherapp/data/remote/ApiServiceTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/ahoy/weatherapp/data/repository/FakeWeatherRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/ahoy/weatherapp/data/repository/FakeWeatherRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/ahoy/weatherapp/presentation/ui/MainViewModelTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/ahoy/weatherapp/presentation/ui/MainViewModelTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/ahoy/core/mapper/WeatherMapper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/ahoy/core/mapper/WeatherMapper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/ahoy/core/responses/forecast/Weather.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/ahoy/core/responses/forecast/Weather.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/ahoy/core/uistates/CurrentWeatherMainUiState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/ahoy/core/uistates/CurrentWeatherMainUiState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/ahoy/core/uistates/CurrentWeatherUIState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/ahoy/core/uistates/CurrentWeatherUIState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/ahoy/core/uistates/forecast/ForeCastWeatherUIState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/ahoy/core/uistates/forecast/ForeCastWeatherUIState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature_weather/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/feature_weather/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/presentation/ui/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/presentation/ui/MainViewModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/presentation/ui/WeatherFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature_weather/src/main/java/com/ahoy/weatherapp/feature/weather/presentation/ui/WeatherFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature_weather/src/test/java/com/ahoy/weatherapp/feature/weather/MockTestUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature_weather/src/test/java/com/ahoy/weatherapp/feature/weather/MockTestUtil.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature_weather/src/test/java/com/ahoy/weatherapp/feature/weather/presentation/ui/MainViewModelTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/feature_weather/src/test/java/com/ahoy/weatherapp/feature/weather/presentation/ui/MainViewModelTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +167,7 @@
       <recent name="com.ahoy.weatherapp.di" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MainViewModelTest">
+  <component name="RunManager" selected="Gradle.ApiServiceTest.test loadCurrentLocationWeather returns currentWeather">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="WeatherApp.app.main" />
       <option name="DEPLOY" value="true" />
@@ -250,6 +224,27 @@
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="ApiServiceTest.test loadCurrentLocationWeather returns currentWeather" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.ahoy.weatherapp.data.remote.ApiServiceTest.test loadCurrentLocationWeather returns currentWeather&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":app:testDebugUnitTest" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="MainViewModelTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -335,42 +330,21 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WeatherRepositoryImpTest.get currentWeather should return success response from remote server" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.ahoy.data.repository.WeatherRepositoryImpTest.get currentWeather should return success response from remote server&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":data:testDebugUnitTest" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Android App.app" />
-      <item itemvalue="Gradle.WeatherRepositoryImpTest.get currentWeather should return success response from remote server" />
       <item itemvalue="Gradle.MainViewModelTest" />
       <item itemvalue="Gradle.MainViewModelTest.test when MainViewModel is initialized, current Location Weather is fetched" />
       <item itemvalue="Gradle.MainViewModelTest.test when MainViewModel is initialized, error is returned when current weather is fetched" />
       <item itemvalue="Gradle.MainViewModelTest.test when forecast data Weather is fetched should return forecast list from use-case" />
+      <item itemvalue="Gradle.ApiServiceTest.test loadCurrentLocationWeather returns currentWeather" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ApiServiceTest.test loadCurrentLocationWeather returns currentWeather" />
+        <item itemvalue="Gradle.MainViewModelTest.test when MainViewModel is initialized, current Location Weather is fetched" />
         <item itemvalue="Gradle.MainViewModelTest" />
         <item itemvalue="Gradle.MainViewModelTest.test when forecast data Weather is fetched should return forecast list from use-case" />
         <item itemvalue="Gradle.MainViewModelTest.test when MainViewModel is initialized, error is returned when current weather is fetched" />
-        <item itemvalue="Gradle.MainViewModelTest.test when MainViewModel is initialized, current Location Weather is fetched" />
-        <item itemvalue="Gradle.WeatherRepositoryImpTest.get currentWeather should return success response from remote server" />
       </list>
     </recent_temporary>
   </component>
