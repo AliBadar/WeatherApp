@@ -93,6 +93,9 @@ class WeatherFragment : Fragment(), OnItemClickListener {
 
     private fun initObservations(){
         viewLifecycleOwner.lifecycleScope.launch {
+//            mainViewModel.currentWeatherData.observe(viewLifecycleOwner){mainUIState: MainUiState ->
+//                updateUI(mainUIState)
+//            }
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 mainViewModel.currentWeatherData.collect { mainUIState: MainUiState ->
                     updateUI(mainUIState)

@@ -4,6 +4,8 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.ahoy.core.database.AppDao
+import com.ahoy.core.database.AppDatabase
 import com.ahoy.weatherapp.MockTestUtil
 import com.google.common.truth.Truth
 import kotlinx.coroutines.runBlocking

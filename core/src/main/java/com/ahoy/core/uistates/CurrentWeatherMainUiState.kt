@@ -5,4 +5,4 @@ sealed class MainUiState
 
 object LoadingState : MainUiState()
 data class Content(val currentWeatherUIState: CurrentWeatherUIState) : MainUiState()
-class ErrorState(val message: String) : MainUiState()
+data class ErrorState(val message: String) : MainUiState()
